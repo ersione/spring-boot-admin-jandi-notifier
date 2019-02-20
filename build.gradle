@@ -1,0 +1,12 @@
+apply plugin: 'java'
+
+group = 'org.ersione'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'de.codecentric:spring-boot-admin-starter-server:2.1.3'
+}

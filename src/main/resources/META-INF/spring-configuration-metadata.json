@@ -1,0 +1,41 @@
+{
+  "groups": [],
+  "hints": [
+    {
+      "name": "spring.boot.admin.notify.jandi.webhook-url",
+      "values": [
+        {
+          "value": "https://wh.jandi.com/connect-api/webhook/xxxx",
+          "description": "if not set, disabled this notifier."
+        }
+      ]
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.exem.flamingo.admin.JandiNotifier",
+      "name": "spring.boot.admin.notify.jandi.webhook-url",
+      "description": "Webhook url for Jandi API (i.e. https:\/\/wh.jandi.com\/connect-api\/webhook\/xxx).",
+      "type": "java.net.URI"
+    },
+    {
+      "sourceType": "com.exem.flamingo.admin.JandiNotifier",
+      "name": "spring.boot.admin.notify.jandi.body",
+      "description": "Jandi message body.",
+      "type": "java.lang.String",
+      "defaultValue": "**#{application.name}** (#{application.id}) is **#{to.status}**"
+    },
+    {
+      "sourceType": "com.exem.flamingo.admin.JandiNotifier",
+      "name": "spring.boot.admin.notify.jandi.title",
+      "description": "Jandi message title.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.exem.flamingo.admin.JandiNotifier",
+      "name": "spring.boot.admin.notify.jandi.description",
+      "description": "Jandi message description.",
+      "type": "java.lang.String"
+    }
+  ]
+}
