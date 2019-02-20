@@ -1,16 +1,6 @@
 {
   "groups": [],
-  "hints": [
-    {
-      "name": "spring.boot.admin.notify.jandi.webhook-url",
-      "values": [
-        {
-          "value": "https://wh.jandi.com/connect-api/webhook/xxxx",
-          "description": "if not set, disabled this notifier."
-        }
-      ]
-    }
-  ],
+  "hints": [],
   "properties": [
     {
       "sourceType": "com.exem.flamingo.admin.JandiNotifier",
