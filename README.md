@@ -15,7 +15,7 @@ spring.boot.admin.notify.jandi.description=Health URL : [#{instance.registration
 [de.codecentric.boot.admin.server.domain.entities.Instance](https://github.com/codecentric/spring-boot-admin/blob/master/spring-boot-admin-server/src/main/java/de/codecentric/boot/admin/server/domain/entities/Instance.java)
 
 ### event
-[de.codecentric.boot.admin.server.domain.events.InstanceEvent]https://github.com/codecentric/spring-boot-admin/blob/master/spring-boot-admin-server/src/main/java/de/codecentric/boot/admin/server/domain/events/InstanceEvent.java
+[de.codecentric.boot.admin.server.domain.events.InstanceEvent](https://github.com/codecentric/spring-boot-admin/blob/master/spring-boot-admin-server/src/main/java/de/codecentric/boot/admin/server/domain/events/InstanceEvent.java)
 
 ### lastStatus
 String
