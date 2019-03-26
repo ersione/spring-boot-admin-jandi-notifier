@@ -3,7 +3,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'signing'
 
 group = 'com.ersione'
-version = '1.0'
+version = '1.0.1'
 
 repositories {
     mavenCentral()
@@ -32,6 +32,7 @@ artifacts {
 publishing {
     publications {
         mavenJava(MavenPublication) {
+            customizePom(pom)
             groupId = 'com.ersione'
             artifactId = 'spring-boot-admin-jandi-notifier'
             version = '1.0'
@@ -57,4 +58,49 @@ publishing {
 
 signing {
     sign publishing.publications.mavenJava
+}
+
+def customizePom(pom) {
+    pom.withXml {
+        def root = asNode()
+
+        // eliminate test-scoped dependencies (no need in maven central POMs)
+        root.dependencies.removeAll { dep ->
+            dep.scope == "test"
+        }
+
+        // add all items necessary for maven central publication
+        root.children().last() + {
+            resolveStrategy = Closure.DELEGATE_FIRST
+
+            name 'spring-boot-admin-jandi-notifier'
+            description 'Spring boot admin notifier for Jandi'
+            url 'https://github.com/ersione/spring-boot-admin-jandi-notifier'
+            organization {
+                name 'com.ersione'
+                url 'https://github.com/ersione'
+            }
+            issueManagement {
+                system 'GitHub'
+                url 'https://github.com/ersione/spring-boot-admin-jandi-notifier/issues'
+            }
+            licenses {
+                license {
+                    name 'Apache License 2.0'
+                    url 'https://github.com/ersione/spring-boot-admin-jandi-notifier/blob/master/LICENSE'
+                    distribution 'repo'
+                }
+            }
+            scm {
+                url 'https://github.com/ersione/spring-boot-admin-jandi-notifier'
+                connection 'scm:git:git@github.com/ersione/spring-boot-admin-jandi-notifier.git'
+                developerConnection 'scm:git:git@github.com/ersione/spring-boot-admin-jandi-notifier.git'
+            }
+            developers {
+                developer {
+                    name 'Ersione'
+                }
+            }
+        }
+    }
 }

@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.ersione.springframework.boot.server.admin.notifier.JandiNotificationConfiguration
