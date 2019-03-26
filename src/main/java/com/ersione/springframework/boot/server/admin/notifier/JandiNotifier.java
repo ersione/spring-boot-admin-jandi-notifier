@@ -110,24 +110,24 @@ public class JandiNotifier extends AbstractStatusChangeNotifier {
         return body;
     }
 
-    public void setBody(Expression body) {
-        this.body = body;
+    public void setBody(String body) {
+        this.body = parser.parseExpression(body, ParserContext.TEMPLATE_EXPRESSION);
     }
 
     public Expression getTitle() {
         return title;
     }
 
-    public void setTitle(Expression title) {
-        this.title = title;
+    public void setTitle(String title) {
+        this.title = parser.parseExpression(title, ParserContext.TEMPLATE_EXPRESSION);
     }
 
     public Expression getDescription() {
         return description;
     }
 
-    public void setDescription(Expression description) {
-        this.description = description;
+    public void setDescription(String description) {
+        this.description = parser.parseExpression(description, ParserContext.TEMPLATE_EXPRESSION);
     }
 
     public void setRestTemplate(RestTemplate restTemplate) {
