@@ -12,20 +12,20 @@
       "sourceType": "com.exem.flamingo.admin.JandiNotifier",
       "name": "spring.boot.admin.notify.jandi.body",
       "description": "Jandi message body.",
-      "type": "java.lang.String",
+      "type": "org.springframework.expression.Expression",
       "defaultValue": "**#{application.name}** (#{application.id}) is **#{to.status}**"
     },
     {
       "sourceType": "com.exem.flamingo.admin.JandiNotifier",
       "name": "spring.boot.admin.notify.jandi.title",
       "description": "Jandi message title.",
-      "type": "java.lang.String"
+      "type": "org.springframework.expression.Expression"
     },
     {
       "sourceType": "com.exem.flamingo.admin.JandiNotifier",
       "name": "spring.boot.admin.notify.jandi.description",
       "description": "Jandi message description.",
-      "type": "java.lang.String"
+      "type": "org.springframework.expression.Expression"
     }
   ]
 }
