@@ -1,5 +1,19 @@
-# spring-boot-admin-jandi-notifier
+
+
+
+spring-boot-admin-jandi-notifier
+===============================
+[![Apache License 2](https://img.shields.io/badge/license-ASF2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0.txt)
+[![Build Status](https://travis-ci.org/ersione/spring-boot-admin-jandi-notifier.svg?branch=master)](https://travis-ci.org/ersione/spring-boot-admin-jandi-notifier)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.ersione/spring-boot-admin-jandi-notifier/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.ersione/spring-boot-admin-jandi-notifier/)
+
+<!--
+[![Coverage Status](https://coveralls.io/repos/github/codecentric/spring-boot-admin/badge.svg?branch=master)](https://coveralls.io/github/codecentric/spring-boot-admin?branch=master)
+[![Gitter](https://badges.gitter.im/codecentric/spring-boot-admin.svg)](https://gitter.im/codecentric/spring-boot-admin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+-->
+
 jandi notifier for spring boot admin 2.x
+
 
 ```properties
 # replace your webhook url
