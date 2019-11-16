@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.ersione"
-version = "1.0.4"
+version = "1.0.3"
 
 repositories {
     mavenCentral()
@@ -38,7 +38,7 @@ publishing {
             customizePom(pom)
             groupId = "com.ersione"
             artifactId = "spring-boot-admin-jandi-notifier"
-            version = "1.0.4"
+            version = "1.0.3"
 
             from components.java
 
