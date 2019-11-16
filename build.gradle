@@ -6,9 +6,9 @@ buildscript {
 
 plugins {
     id "java"
-    id "maven-publish"
     id "signing"
-    id "org.hibernate.build.maven-repo-auth" version "3.0.0"
+    id "maven-publish"
+//    id "org.hibernate.build.maven-repo-auth" version "3.0.0"
 }
 
 repositories {
